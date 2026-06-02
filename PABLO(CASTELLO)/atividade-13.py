@@ -10,6 +10,10 @@ def janela_bemvindo():
     else:
         messagebox.showinfo("Bem-vindo", f"Olá usuário {nome}, e você tem {idade} anos - Seja bem-vindo no nosso sistema")
    
+def segunda_janela():
+    segunda_janela = tk.Toplevel(janela)
+    segunda_janela.title("Segunda Janela")
+    segunda_janela.geometry("300x300")
 
     # Janela
 janela = tk.Tk()
@@ -32,6 +36,9 @@ idade_usuario.grid(row=1, column=1, pady=10, padx=10)
 
 btn_mensagem = tk.Button(janela, text="Mensagem", command=janela_bemvindo)
 btn_mensagem.grid(row=2, column=0, pady=10, padx=10)
+
+bnt_segunda_janela = tk.Button(janela, text= "Abrindo Segunda Janela", command=segunda_janela)
+bnt_segunda_janela.grid(row=3, column=0, pady=10, padx=10)
 
     # Rodar interface
 janela.mainloop()
