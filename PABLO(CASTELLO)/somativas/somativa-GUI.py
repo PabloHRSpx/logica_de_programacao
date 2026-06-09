@@ -170,41 +170,178 @@
 
 # ATIVIDADE 5
 
+# import tkinter as tk
+# from tkinter import messagebox
+
+# def janela_bemvindo():
+
+#     numero1 = float(temperatura_usuario.get())
+   
+  
+
+#     if  numero1 < 40:
+#         messagebox.showwarning("Bem-Vindo", "Está abaixo de 40°C: BAIXA CARGA")
+#     elif numero1 > 40 and numero1 < 70:
+#         messagebox.showwarning("Bem-Vindo", "Está entre 40°C e 70°C: NORMAL")
+#     elif  numero1 > 70:
+#         messagebox.showwarning("Bem-Vindo", "Está acima de 70°C: ALERTA : Resfriamento ativado")
+
+#     else:
+#         messagebox.showinfo("Temperatura")
+   
+
+#     # Janela
+# janela = tk.Tk()
+# janela.title("Calculo")
+# janela.geometry("300x300")
+# janela.configure(bg="black")
+
+#     # Componentes
+# lbl_mensagem = tk.Label(janela, text="Digite a temperatura do motor: ")
+# lbl_mensagem.grid(row=0, column=0, pady=10, padx=10)
+
+
+# temperatura_usuario = tk.Entry(janela, font=("Arial", 12))
+# temperatura_usuario.grid(row=0, column=1, pady=10, padx=10)
+
+
+# btn_mensagem = tk.Button(janela, text="Mensagem", command=janela_bemvindo)
+# btn_mensagem.grid(row=1, column=0, pady=10, padx=10)
+
+# janela.mainloop()
+
+
+# ATIVIDADE 6
+
+# import tkinter as tk
+# from tkinter import messagebox
+
+# def janela_bemvindo():
+
+#     letra = letra_usuario.get()
+   
+  
+
+#     if  letra == "a":
+#         messagebox.showinfo("Bem-Vindo", "Código de Alimentos")
+#     elif letra == "e":
+#         messagebox.showinfo("Bem-Vindo", "Código de Eletrônicos")
+#     elif  letra != "":
+#         messagebox.showinfo("Bem-Vindo", "Código Desconhecido")
+
+#     else:
+#         messagebox.showinfo("Códigos")
+   
+
+#     # Janela
+# janela = tk.Tk()
+# janela.title("Código")
+# janela.geometry("300x300")
+# janela.configure(bg="black")
+
+#     # Componentes
+# lbl_mensagem = tk.Label(janela, text="Digite a letra do código: ")
+# lbl_mensagem.grid(row=0, column=0, pady=10, padx=10)
+
+
+# letra_usuario = tk.Entry(janela, font=("Arial", 12))
+# letra_usuario.grid(row=0, column=1, pady=10, padx=10)
+
+
+# btn_mensagem = tk.Button(janela, text="Confirmar", command=janela_bemvindo)
+# btn_mensagem.grid(row=1, column=0, pady=10, padx=10)
+
+# janela.mainloop()
+
+
+# ATIVIDADE 7
+
+# import tkinter as tk
+# from tkinter import messagebox
+
+# def janela_bemvindo():
+
+#     sensor = porta_usuario.get()
+#     botao = botao_usuario.get()
+  
+
+#     if  sensor == "fechada" and  botao == "desligada":
+#         messagebox.showinfo("Bem-Vindo", "Máquina liberada para inciar! ")
+#     elif sensor == "aberta" and botao == "ligada":
+#         messagebox.showinfo("Bem-Vindo", "Máquina não liberada para iniciar! ")
+#     elif sensor != "" and botao != "":
+#         messagebox.showwarning("Bem-Vindo", "Erro ao passar o estado da máquina! ")
+#     else:
+#         messagebox.showerror("Erro", "Digite algo válido! ")
+   
+
+#     # Janela
+# janela = tk.Tk()
+# janela.title("Máquina")
+# janela.geometry("300x300")
+# janela.configure(bg="black")
+
+#     # Componentes
+# lbl_mensagem = tk.Label(janela, text="Diga o estado do sensor:  ")
+# lbl_mensagem.grid(row=0, column=0, pady=10, padx=10)
+# lbl_mensagem = tk.Label(janela, text="Diga o estado do botão:  ")
+# lbl_mensagem.grid(row=1, column=0, pady=10, padx=10)
+
+
+# porta_usuario = tk.Entry(janela, font=("Arial", 12))
+# porta_usuario.grid(row=0, column=1, pady=10, padx=10)
+
+# botao_usuario = tk.Entry(janela, font=("Arial", 12))
+# botao_usuario.grid(row=1, column=1, pady=10, padx=10)
+
+# btn_mensagem = tk.Button(janela, text="Confirmar", command=janela_bemvindo)
+# btn_mensagem.grid(row=2, column=1, pady=10, padx=10)
+
+# janela.mainloop()
+
+
+# ATIVIDADE 8
+
 import tkinter as tk
 from tkinter import messagebox
 
 def janela_bemvindo():
 
-    numero1 = float(temeperatura_usuario.get())
-   
+    numero1 = float(pecas_produzidas.get())
+    numero2 = float(pecas_defeitos.get())
   
 
-    if  numero1 == "":
-        messagebox.showwarning("Bem-Vindo", "Está abaixo de 40°C: BAIXA CARGA")
-
-    elif:
-    messagebox.showinfo("Bem-Vindo", "Está entre 40°C e 70°C: NORMAl")
+    if  numero1 > numero2 and numero2 > 5:
+        messagebox.showwarning("Bem-Vindo", "Revisar processo! ")
+    elif numero1 > numero2:
+        messagebox.showwarning("Bem-Vindo", "Processo Otimizado! ")
 
     else:
-        messagebox.showinfo("Bem-Vindo", "")
+        messagebox.showinfo(" Tudo Certo!")
    
 
     # Janela
 janela = tk.Tk()
 janela.title("Calculo")
-janela.geometry("300x300")
+janela.geometry("500x200")
 janela.configure(bg="black")
 
     # Componentes
-lbl_mensagem = tk.Label(janela, text="Digite a temperatura do motor: ")
+lbl_mensagem = tk.Label(janela, text="Digite a quantidade de peças produzidas: ")
 lbl_mensagem.grid(row=0, column=0, pady=10, padx=10)
 
+lbl_mensagem = tk.Label(janela, text="Digite a quantidade de peças defeituosas: ")
+lbl_mensagem.grid(row=1, column=0, pady=10, padx=10)
 
-bar_usuario = tk.Entry(janela, font=("Arial", 12))
-bar_usuario.grid(row=0, column=1, pady=10, padx=10)
+
+pecas_produzidas = tk.Entry(janela, font=("Arial", 12))
+pecas_produzidas.grid(row=0, column=1, pady=10, padx=10)
+
+pecas_defeitos = tk.Entry(janela, font=("Arial", 12))
+pecas_defeitos.grid(row=1, column=1, pady=10, padx=10)
 
 
-btn_mensagem = tk.Button(janela, text="Mensagem", command=janela_bemvindo)
-btn_mensagem.grid(row=1, column=0, pady=10, padx=10)
+btn_mensagem = tk.Button(janela, text="Confirmar", command=janela_bemvindo)
+btn_mensagem.grid(row=2, column=1, pady=10, padx=10)
 
 janela.mainloop()
