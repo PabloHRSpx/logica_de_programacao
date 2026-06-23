@@ -30,7 +30,7 @@ lbl_mensagem = tk.Label(janela, text="Digite o seu nome: ")
 lbl_mensagem.grid(row=0, column=0, pady=10, padx=10)
 
 lbl_mensagem2 = tk.Label(segunda_janela, text="Digite o nome do livro: ")
-lbl_mensagem.grid(row=0, column=0, pady=10, padx=10)
+lbl_mensagem2.grid(row=0, column=0, pady=10, padx=10)
 
 # RESPONDER
 nome_usuario = tk.Entry(janela, font=("Arial", 12))
