@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Battle</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <div id="menu">
+
+        <h1>STREET BATTLE</h1>
+
+        <div class="mode-selection">
+            <h2>Modo de Jogo</h2>
+
+            <button onclick="selectMode('bot')">
+                Jogar Contra BOT
+            </button>
+
+            <button onclick="selectMode('pvp')">
+                2 Jogadores
+            </button>
+        </div>
+
+        <div id="characterSelect" class="hidden">
+
+            <h2>Escolha os Lutadores</h2>
+
+            <div class="characters">
+
+                <div class="character" onclick="chooseCharacter('Ninja')">
+
+                    <h3>Ninja</h3>
+
+                    <p>Velocidade: 10</p>
+                    <p>Força: 6</p>
+                    <p>Especial: Shuriken</p>
+
+                </div>
+
+                <div class="character" onclick="chooseCharacter('Samurai')">
+
+                    <h3>Samurai</h3>
+
+                    <p>Velocidade: 6</p>
+                    <p>Força: 10</p>
+                    <p>Especial: Corte Supremo</p>
+
+                </div>
+
+                <div class="character" onclick="chooseCharacter('Monge')">
+
+                    <h3>Monge</h3>
+
+                    <p>Velocidade: 8</p>
+                    <p>Força: 8</p>
+                    <p>Especial: Onda de Energia</p>
+
+                </div>
+
+                <div class="character" onclick="chooseCharacter('Robô')">
+
+                    <h3>Robô</h3>
+
+                    <p>Velocidade: 5</p>
+                    <p>Força: 12</p>
+                    <p>Especial: Laser</p>
+
+                </div>
+
+                <div class="character" onclick="chooseCharacter('Dragão')">
+
+                    <h3>Dragão</h3>
+
+                    <p>Velocidade: 7</p>
+                    <p>Força: 9</p>
+                    <p>Especial: Bola de Fogo</p>
+
+                </div>
+
+            </div>
+
+            <div id="selectionInfo">
+                <p>Jogador 1: Não selecionado</p>
+                <p>Jogador 2: Não selecionado</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- GAME -->
+
+    <div id="gameContainer" class="hidden">
+
+        <div id="hud">
+            <div id="controlsPanel">
+
+                <div class="controlsBox">
+
+                    <h3 id="p1Skills">
+                        Jogador 1
+                    </h3>
+
+                    <p>A / D = Mover</p>
+                    <p>W = Pular</p>
+                    <p>F = Ataque</p>
+                    <p>G = Especial</p>
+
+                </div>
+
+                <div class="controlsBox">
+
+                    <h3 id="p2Skills">
+                        Jogador 2
+                    </h3>
+
+                    <p>← → = Mover</p>
+                    <p>↑ = Pular</p>
+                    <p>K = Ataque</p>
+                    <p>L = Especial</p>
+
+                </div>
+
+            </div>
+
+            <div class="playerHUD">
+
+                <h3 id="p1Name">Jogador 1</h3>
+
+                <div class="lifeBar">
+
+                    <div id="life1" class="life"></div>
+                    <div id="p1Commands" class="commands"></div>
+                    F =Ataque | G = Especial
+
+                </div>
+
+                <div id="score1">Rounds: 0</div>
+
+            </div>
+
+            <div id="roundInfo">
+
+                ROUND
+
+                <span id="roundNumber">1</span>
+
+            </div>
+
+            <div class="playerHUD">
+
+                <h3 id="p2Name">Jogador 2</h3>
+
+                <div class="lifeBar">
+
+                    <div id="life2" class="life"></div>
+                    <div id="p2Commands" class="commands"></div>
+                    K = Ataque | L = Especial
+
+                </div>
+
+                <div id="score2">Rounds: 0</div>
+
+            </div>
+
+        </div>
+
+        <div id="arena">
+
+            <div id="fighter1" class="fighter player1">
+                <div class="head"></div>
+
+                <div class="body"></div>
+
+                <div class="arm leftArm"></div>
+                <div class="arm rightArm"></div>
+
+                <div class="leg leftLeg"></div>
+                <div class="leg rightLeg"></div>
+
+            </div>
+
+            <div id="fighter2" class="fighter player2">
+
+                <div class="head"></div>
+
+                <div class="body"></div>
+
+                <div class="arm leftArm"></div>
+                <div class="arm rightArm"></div>
+
+                <div class="leg leftLeg"></div>
+                <div class="leg rightLeg"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- VITÓRIA -->
+
+    <div id="winnerScreen" class="hidden">
+
+        <h1 id="winnerText">
+            Vencedor
+        </h1>
+
+        <button onclick="location.reload()">
+            Jogar Novamente
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
